@@ -1,0 +1,65 @@
+<!-- next goal: add gifs via js -->
+
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="crush.css">
+  <title>Crush.exe</title>
+</head>
+
+<body id="Full-whole">
+
+
+
+  <div class="wrapper">
+    <div class="container">
+      <p id="question">Do you love me?</p>
+      <button id="yes">Yes</button>
+      <button id="no">NO</button>
+    </div>
+  </div>
+  <audio id="kilig">
+    <source src="misc/MUSIC.mp3" type="mp3"></source>
+    <source src="misc/MUSIC.mp3"></source>
+  </audio>
+</body>
+
+
+<script>
+  //assign variables within DOM execution
+  const noBtn = document.getElementById("no"); 
+  const yesbtn = document.getElementById("yes");
+  const ques = document.getElementById("question");
+  const whole = document.getElementById("Full-whole")
+  var sound = $("#kilig")[0];
+
+  // No btn just fckin tp anywhere  
+  noBtn.addEventListener("mouseover", (event) => {
+    let rand = Math.floor(Math.random() * (500 - 100) + 1);
+    let randz = Math.floor(Math.random() * (-300 - 100) + 1);
+    noBtn.style.transform = "translate(" + rand + "px," + randz + "px)";
+  });
+
+  // yes btn click event
+  yesbtn.addEventListener("click", () => {  
+    ques.innerHTML = "I LOVE YOU TOO <3 ";
+    ques.style.color = "#FF577F";
+    // whole.style.background-imageurl == url("img/bg_crush.jpeg"); // on propcess
+    sound.play();      // without jquery :>
+  });
+
+  // yes btn mouseover event
+  yesbtn.addEventListener("mouseover", (event) => {
+    yesbtn.innerHTML = "yiee :>";
+    yesbtn.style.height = "60px"
+  });
+
+  //yes btn music  //update: dpota nagana diay bis wrae jquery :<
+  // $("#yes").click(function() {
+  // sound.play();
+  // });
+</script>

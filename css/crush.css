@@ -1,0 +1,41 @@
+#question {
+    color: black;
+  }
+
+  body {
+    background-image: url("img/bg_crush.jpeg");
+    background-size: cover;
+  }
+  .wrapper {
+    margin-left: 600px;
+    margin-top: 350px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 300px;
+    height: 150px;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    background-color: antiquewhite;
+  }
+
+  .container {
+    font-size: 30px;
+  }
+  button {
+    font-size: 20px;
+    border-radius: 9.5px;
+    width: 75px;
+    height: 40px;
+  }
+
+  #yes {
+    background-color: lightskyblue;
+  }
+  #yes:hover {
+    background-color: royalblue;
+  }
+  #no {
+    background-color: #E0144C;
+  }

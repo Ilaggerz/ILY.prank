@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
   <link rel="stylesheet" href="css/crush.css">
   <title>Crush.exe</title>
 </head>
@@ -14,7 +13,7 @@
   <section>
   <div class="wrapper">
     <div class="container">
-      <p id="question">Do you love me?</p>
+      <p id="question">Do you love me crush?</p>
       <button id="yes">Yes</button>
       <button id="no">NO</button>
     </div>
@@ -35,9 +34,8 @@
   const noBtn = document.getElementById("no"); 
   const yesbtn = document.getElementById("yes");
   const ques = document.getElementById("question");
-  const whole = document.getElementById("Full-whole")
   const BODY = document.getElementsByTagName("body")
-  var sound = $("#kilig")[0];
+  const sound = document.getElementById("kilig")
 
   // No btn just fckin tp anywhere  
   noBtn.addEventListener("mouseover", (e) => {
@@ -47,11 +45,12 @@
   });
 
   // yes btn click event
-  yesbtn.addEventListener("click", () => {  
+  yesbtn.addEventListener("click", (e) => {  
     sound.play();  
-    ques.innerHTML = "I LOVE YOU TOO 🤍";
-    ques.style.color = "#000000";
     document.body.style.backgroundImage = "url('./img/2nd_bg.webp')";
+    ques.innerHTML = "I LOVE YOU TOO 🤍"; 
+    ques.style.color = "#000000";
+    // ques.style.fontFamily = "Geraldine" 
   });
 
   // yes btn mouseover event

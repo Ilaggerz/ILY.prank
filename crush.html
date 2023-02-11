@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <link rel="stylesheet" href="css/crush.css">
+  <title>Crush.exe</title>
+</head>
+
+<body>
+  <section>
+  <div class="wrapper">
+    <div class="container">
+      <p id="question">Do you love me crush?</p>
+      <button id="yes">Yes</button>
+      <button id="no">NO</button>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <audio id="kilig">
+    <source src="misc/MUSIC.mp3" type="mp3"></source>
+    <source src="misc/MUSIC.mp3"></source>
+  </audio>
+</section>
+</body>
+
+
+<script>
+  // assign variables within DOM execution
+  const noBtn = document.getElementById("no"); 
+  const yesbtn = document.getElementById("yes");
+  const ques = document.getElementById("question");
+  const BODY = document.getElementsByTagName("body")
+  const sound = document.getElementById("kilig")
+
+  // No btn just fckin tp anywhere  
+  noBtn.addEventListener("mouseover", (e) => {
+    let rand = Math.floor(Math.random() * (500 - 100) + 1);
+    let randz = Math.floor(Math.random() * (-350 - 100) + 1);
+    noBtn.style.transform = "translate(" + rand + "px," + randz + "px)";
+  });
+
+  // yes btn click event
+  yesbtn.addEventListener("click", (e) => {  
+    sound.play();
+    document.body.style.backgroundImage = "url('./img/2nd_bg.webp')";
+    ques.innerHTML = "I LOVE YOU TOO 🤍"; 
+    ques.style.color = "#000000";
+  });
+
+  // yes btn mouseover event
+  yesbtn.addEventListener("mouseover", (e) => {
+    yesbtn.innerHTML = "Yieee 🥰"
+    yesbtn.style.height = "50px"
+    yesbtn.style.width = "100px"
+  });
+
+</script>
